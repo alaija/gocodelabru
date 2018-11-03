@@ -7,11 +7,13 @@ import (
 	"github.com/labstack/echo"
 )
 
+// API структура описыающая API
 type API struct {
 	echo     *echo.Echo
 	bindAddr string
 }
 
+// New создает новое API c по адресу `bindAddr`
 func New(bindAddr string) *API {
 	a := &API{}
 	a.echo = echo.New()
@@ -24,6 +26,7 @@ func New(bindAddr string) *API {
 	return a
 }
 
+// Start запускает API
 func (a *API) Start() error {
 	return a.echo.Start(a.bindAddr)
 }
