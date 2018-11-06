@@ -7,6 +7,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
+// Тестирует основные методы
 func TestStorage(t *testing.T) {
 	s := New()
 	driver := &Driver{
@@ -32,6 +33,7 @@ func TestStorage(t *testing.T) {
 	assert.Equal(t, err, errors.New("Driver does not exist"))
 }
 
+// Тестирует метод `Nearest`
 func TestNearest(t *testing.T) {
 
 	s := New()
@@ -54,6 +56,7 @@ func TestNearest(t *testing.T) {
 	assert.Equal(t, len(drivers), 1)
 }
 
+// Бенчмарк метода `Nearest`
 func BenchmarkNearest(b *testing.B) {
 	s := New()
 	for i := 0; i < 100; i++ {
