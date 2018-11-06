@@ -33,6 +33,7 @@ func TestStorage(t *testing.T) {
 }
 
 func TestNearest(t *testing.T) {
+
 	s := New()
 	s.Set(123, &Driver{
 		ID: 123,
@@ -49,7 +50,7 @@ func TestNearest(t *testing.T) {
 		},
 	})
 
-	drivers := s.Nearest(1000, 42.876420, 74.588332)
+	drivers := s.Nearest(1, 42.876420, 74.588332)
 	assert.Equal(t, len(drivers), 1)
 }
 
@@ -65,6 +66,6 @@ func BenchmarkNearest(b *testing.B) {
 		})
 	}
 	for i := 0; i < b.N; i++ {
-		s.Nearest(1000, 123, 123)
+		s.Nearest(10, 123, 123)
 	}
 }
