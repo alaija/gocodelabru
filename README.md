@@ -3,13 +3,18 @@
 
 # Установка
 Для установки необходимо выполнить команду:
+
 `go get -u github.com/alaija/gocodelabru`
 
 # Зависимости
 Для построения API используется фреймворк [echo](http://echo.labstack.com)
-Для загрузки зависимости используем команду:
-`go get -u github.com/labstack/echo`
+Для тестирования используется пакет [assert](https://github.com/stretchr/testify)
+Для R-Tree используется пакет [rtreego](https://github.com/dhconnelly/rtreego)
 
-Для тестирования используется пакет [assert](https://github.com/stretchr/testify/assert)
-Для загрузки зависимости используем команду:
-`go get -u github.com/stretchr/testify/assert`
+Что бы установить зависимости необходимо перейти в папку: 
+
+`$GOPATH/src/github.com/alaija/gocodelabru`
+
+и запустить:
+
+`go get -u -v`
