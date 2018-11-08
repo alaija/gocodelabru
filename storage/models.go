@@ -1,5 +1,9 @@
 package storage
 
+import (
+	"github.com/alaija/gocodelabru/storage/lru"
+)
+
 type (
 	// Location используется для хранения координат водителя
 	Location struct {
@@ -10,5 +14,7 @@ type (
 	Driver struct {
 		ID           int
 		LastLocation Location
+		Expiration   int64
+		Locations    *lru.LRU
 	}
 )
