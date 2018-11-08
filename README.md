@@ -8,13 +8,7 @@
 
 # Зависимости
 Для построения API используется фреймворк [echo](http://echo.labstack.com)
+
 Для тестирования используется пакет [assert](https://github.com/stretchr/testify)
+
 Для R-Tree используется пакет [rtreego](https://github.com/dhconnelly/rtreego)
-
-Что бы установить зависимости необходимо перейти в папку: 
-
-`$GOPATH/src/github.com/alaija/gocodelabru`
-
-и запустить:
-
-`go get -u -v`
